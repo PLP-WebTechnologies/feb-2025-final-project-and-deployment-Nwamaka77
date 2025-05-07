@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Tori & Spice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo">Tori & Spice</a>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn" aria-label="Toggle menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-header">
+                <h1 class="shop-title">Shop Our Collection</h1>
+                <p>Discover premium Nigerian spices and seasonings made with natural ingredients.</p>
+            </div>
+            
+            <div class="shop-container">
+                <!-- Filters Sidebar -->
+                <div class="filters-sidebar">
+                    <h3 class="filter-title">Filters</h3>
+                    
+                    <!-- Spice Type Filter -->
+                    <div class="filter-section">
+                        <h4 class="filter-subtitle">Spice Type</h4>
+                        <ul class="filter-options">
+                            <li class="filter-option">
+                                <input type="checkbox" id="suya" class="filter-checkbox" value="suya">
+                                <label for="suya">Suya Spice</label>
+                            </li>
+                            <li class="filter-option">
+                                <input type="checkbox" id="pepper" class="filter-checkbox" value="pepper">
+                                <label for="pepper">Pepper Mix</label>
+                            </li>
+                            <li class="filter-option">
+                                <input type="checkbox" id="seasoning" class="filter-checkbox" value="seasoning">
+                                <label for="seasoning">Seasoning</label>
+                            </li>
+                            <li class="filter-option">
+                                <input type="checkbox" id="soup" class="filter-checkbox" value="soup">
+                                <label for="soup">Soup Spices</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Price Range Filter -->
+                    <div class="filter-section">
+                        <h4 class="filter-subtitle">Price Range</h4>
+                        <div class="price-range">
+                            <input type="range" min="500" max="10000" value="5000" id="price-slider" 
+                                   aria-labelledby="price-value">
+                            <div class="price-labels">
+                                <span>₦500</span>
+                                <span id="price-value">₦5,000</span>
+                                <span>₦10,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags Filter -->
+                    <div class="filter-section">
+                        <h4 class="filter-subtitle">Tags</h4>
+                        <div class="filter-tags">
+                            <button class="filter-tag" data-tag="natural">100% Natural</button>
+                            <button class="filter-tag" data-tag="bestseller">Bestseller</button>
+                            <button class="filter-tag" data-tag="hot">Hot</button>
+                            <button class="filter-tag" data-tag="new">New</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Clear Filters Button -->
+                    <button class="btn" id="clear-filters">Clear Filters</button>
+                </div>
+                
+                <!-- Product Grid -->
+                <div class="shop-content">
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card" data-type="suya" data-price="3500" data-tags="bestseller,natural">
+                            <div class="product-image-container">
+                                <img src="spice1.jpg" alt="Premium Suya Spice" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Premium Suya Spice</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(42)</span>
+                                </div>
+                                <p class="product-price">₦3,500</p>
+                                <button class="btn add-to-cart-btn" data-id="1" aria-label="Add Premium Suya Spice to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 2 -->
+                        <div class="product-card" data-type="seasoning" data-price="2800" data-tags="bestseller,natural">
+                            <div class="product-image-container">
+                                <img src="spice2.jpg" alt="Jollof Rice Seasoning" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Jollof Rice Seasoning</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(37)</span>
+                                </div>
+                                <p class="product-price">₦2,800</p>
+                                <button class="btn add-to-cart-btn" data-id="2" aria-label="Add Jollof Rice Seasoning to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 3 -->
+                        <div class="product-card" data-type="soup" data-price="3200" data-tags="hot,natural">
+                            <div class="product-image-container">
+                                <img src="spice3.jpg" alt="Pepper Soup Mix" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Pepper Soup Mix</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(28)</span>
+                                </div>
+                                <p class="product-price">₦3,200</p>
+                                <button class="btn add-to-cart-btn" data-id="3" aria-label="Add Pepper Soup Mix to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 4 -->
+                        <div class="product-card" data-type="seasoning" data-price="2500" data-tags="natural">
+                            <div class="product-image-container">
+                                <img src="spice4.jpg" alt="Premium Iru (Locust Bean)" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Premium Iru (Locust Bean)</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(19)</span>
+                                </div>
+                                <p class="product-price">₦2,500</p>
+                                <button class="btn add-to-cart-btn" data-id="4" aria-label="Add Premium Iru to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 5 -->
+                        <div class="product-card" data-type="pepper" data-price="2200" data-tags="hot,natural">
+                            <div class="product-image-container">
+                                <img src="spice2.jpg" alt="Traditional Dry Pepper" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Traditional Dry Pepper</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(23)</span>
+                                </div>
+                                <p class="product-price">₦2,200</p>
+                                <button class="btn add-to-cart-btn" data-id="5" aria-label="Add Traditional Dry Pepper to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 6 -->
+                        <div class="product-card" data-type="seasoning" data-price="4200" data-tags="new,natural">
+                            <div class="product-image-container">
+                                <img src="spice4.jpg" alt="Egusi Soup Seasoning" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Egusi Soup Seasoning</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(14)</span>
+                                </div>
+                                <p class="product-price">₦4,200</p>
+                                <button class="btn add-to-cart-btn" data-id="6" aria-label="Add Egusi Soup Seasoning to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 7 -->
+                        <div class="product-card" data-type="pepper" data-price="3800" data-tags="hot,new">
+                            <div class="product-image-container">
+                                <img src="spice2.jpg" alt="Spicy BBQ Rub" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Spicy BBQ Rub</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(8)</span>
+                                </div>
+                                <p class="product-price">₦3,800</p>
+                                <button class="btn add-to-cart-btn" data-id="7" aria-label="Add Spicy BBQ Rub to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 8 -->
+                        <div class="product-card" data-type="soup" data-price="3000" data-tags="natural">
+                            <div class="product-image-container">
+                                <img src="spice3.jpg" alt="Okro Soup Mix" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Okro Soup Mix</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(16)</span>
+                                </div>
+                                <p class="product-price">₦3,000</p>
+                                <button class="btn add-to-cart-btn" data-id="8" aria-label="Add Okro Soup Mix to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Product 9 -->
+                        <div class="product-card" data-type="suya" data-price="4500" data-tags="bestseller,natural">
+                            <div class="product-image-container">
+                                <img src="spice4.jpg" alt="Premium Suya Spice (XL Size)" class="product-image">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Premium Suya Spice (XL Size)</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(31)</span>
+                                </div>
+                                <p class="product-price">₦4,500</p>
+                                <button class="btn add-to-cart-btn" data-id="9" aria-label="Add Premium Suya Spice XL to cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Tori & Spice</h3>
+                    <p>Bringing authentic Nigerian flavors to your kitchen since 2020.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shipping.html">Shipping Policy</a></li>
+                        <li><a href="return.html">Return Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="far fa-envelope"></i> <a href="mailto:hello@toriandspice.com">hello@toriandspice.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+2341234567890">+234 123 456 7890</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Tori & Spice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

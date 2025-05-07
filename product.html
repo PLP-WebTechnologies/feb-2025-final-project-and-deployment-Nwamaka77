@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Tori & Spice</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo">Tori & Spice</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="cart.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </a>
+          <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Details Section -->
+  <section class="product-details">
+    <div class="container">
+      <div class="product-navigation">
+        <a href="shop.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Shop</a>
+      </div>
+      <div class="details-grid">
+        <div class="product-image-gallery">
+          <div class="main-image">
+            <img id="mainProductImage" src="/api/placeholder/500/500" alt="Premium Suya Spice">
+          </div>
+          <div class="thumbnail-images">
+            <img src="/api/placeholder/500/500" alt="Premium Suya Spice - View 1" class="thumbnail" data-image-id="1">
+            <img src="/api/placeholder/500/500" alt="Premium Suya Spice - View 2" class="thumbnail" data-image-id="2">
+            <img src="/api/placeholder/500/500" alt="Premium Suya Spice - View 3" class="thumbnail" data-image-id="3">
+          </div>
+        </div>
+        <div class="product-info">
+          <h1>Premium Suya Spice</h1>
+          <p class="product-price">₦3,500</p>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span class="rating-count">(42 Reviews)</span>
+          </div>
+          <div class="product-description">
+            <p>
+              This suya spice is made with a perfect blend of traditional ingredients to give you the authentic taste of Nigerian street food. Enjoy the deep flavor that has been perfected over generations.
+            </p>
+            <p>
+              Our Premium Suya Spice blend contains carefully selected peanuts, ginger, garlic, paprika, and other authentic spices to create the perfect balance of flavors.
+            </p>
+          </div>
+          <div class="product-meta">
+            <p><strong>Weight:</strong> 100g</p>
+            <p><strong>Category:</strong> <a href="shop.html?category=meat">Meat Seasonings</a></p>
+            <p><strong>Tags:</strong> <a href="shop.html?tag=suya">Suya</a>, <a href="shop.html?tag=grilling">Grilling</a></p>
+          </div>
+          <div class="product-controls">
+            <div class="quantity-selector">
+              <button class="quantity-btn decrease-btn" aria-label="Decrease quantity">-</button>
+              <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" aria-label="Product quantity">
+              <button class="quantity-btn increase-btn" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="btn add-to-cart-btn" data-id="1" aria-label="Add Premium Suya Spice to cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Tabs -->
+      <div class="product-tabs">
+        <div class="tab-navigation">
+          <button class="tab-btn active" data-tab="details" aria-pressed="true">Details</button>
+          <button class="tab-btn" data-tab="ingredients" aria-pressed="false">Ingredients</button>
+          <button class="tab-btn" data-tab="usage" aria-pressed="false">How to Use</button>
+          <button class="tab-btn" data-tab="reviews" aria-pressed="false">Reviews (42)</button>
+        </div>
+        <div class="tab-content active" id="details-tab">
+          <h3>Product Details</h3>
+          <p>Our Premium Suya Spice is carefully blended to bring the authentic taste of Nigerian street barbecue to your home. Perfect for grilling meat, poultry, and even vegetables.</p>
+          <ul>
+            <li>100% natural ingredients</li>
+            <li>No preservatives or artificial additives</li>
+            <li>Perfect for barbecues and grilling</li>
+            <li>Shelf life: 12 months from production date</li>
+            <li>Made in Nigeria</li>
+          </ul>
+        </div>
+        <div class="tab-content" id="ingredients-tab">
+          <h3>Ingredients</h3>
+          <p>Ground peanuts, ginger, garlic, paprika, cayenne pepper, onion powder, salt, and other natural spices.</p>
+          <p><strong>Allergen Information:</strong> Contains peanuts. Produced in a facility that also processes other nuts and gluten.</p>
+        </div>
+        <div class="tab-content" id="usage-tab">
+          <h3>How to Use</h3>
+          <p>For the perfect Suya experience:</p>
+          <ol>
+            <li>Thinly slice your choice of meat (beef, chicken, or lamb works best)</li>
+            <li>Coat the meat with a little oil</li>
+            <li>Generously sprinkle the suya spice on all sides</li>
+            <li>Let marinate for at least 30 minutes (2-4 hours for best results)</li>
+            <li>Grill on high heat until cooked to your preference</li>
+            <li>Serve with sliced onions and tomatoes</li>
+          </ol>
+        </div>
+        <div class="tab-content" id="reviews-tab">
+          <h3>Customer Reviews</h3>
+          <div class="review-summary">
+            <div class="average-rating">
+              <span class="rating-number">4.5</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <span>Based on 42 reviews</span>
+            </div>
+          </div>
+          <div class="review-list">
+            <!-- Individual reviews -->
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-name">Chioma A.</div>
+                <div class="review-date">March 15, 2025</div>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                <p>The Suya Spice is absolutely perfect! It brings back memories of roadside grills in Lagos. My family can't get enough.</p>
+              </div>
+            </div>
+            <div class="review-item">
+              <div class="review-header">
+                <div class="reviewer-name">Daniel O.</div>
+                <div class="review-date">February 28, 2025</div>
+              </div>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="review-text">
+                <p>This is the closest you can get to authentic suya without visiting a mallam's spot! The flavor profile is spot on.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="related-products">
+    <div class="container">
+      <h2 class="section-title">You May Also Like</h2>
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="/api/placeholder/300/200" alt="Jollof Rice Seasoning" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Jollof Rice Seasoning</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="rating-count">(37)</span>
+            </div>
+            <p class="product-price">₦2,800</p>
+            <button class="btn add-to-cart-btn" data-id="2" aria-label="Add Jollof Rice Seasoning to cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="/api/placeholder/300/200" alt="Pepper Soup Mix" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Pepper Soup Mix</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="rating-count">(28)</span>
+            </div>
+            <p class="product-price">₦3,200</p>
+            <button class="btn add-to-cart-btn" data-id="3" aria-label="Add Pepper Soup Mix to cart">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-image-container">
+            <img src="/api/placeholder/300/200" alt="Premium Iru (Locust Bean)" class="product-image" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-name">Premium Iru (Locust Bean)</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span class="rating-count">(19)</span>
+            </div>
+            <p class="product-price">₦2,500</p>
+            <button class="btn add-to-cart-btn" data-id="4" aria-label="Add Premium Iru to cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Tori & Spice</h3>
+          <p>Bringing authentic Nigerian flavors to your kitchen since 2020.</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Help</h3>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping.html">Shipping Policy</a></li>
+            <li><a href="return.html">Return Policy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="footer-contact">
+            <li><i class="far fa-envelope"></i> <a href="mailto:hello@toriandspice.com">hello@toriandspice.com</a></li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+2341234567890">+234 123 456 7890</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tori & Spice. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load main script and product script separately -->
+  <script src="script.js"></script>
+</body>
+</html>
